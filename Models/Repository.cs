@@ -33,6 +33,11 @@ namespace FormsApp.Models
             }
         }
 
+        public static void CreateProduct(Product entity) //formdan gelen verileri alacak repo
+        {
+            _products.Add(entity);
+        }
+
         public static List<Category> Categories
         {
             get
@@ -40,6 +45,7 @@ namespace FormsApp.Models
                 return _categories;
             }
         }
+
 
 
     }

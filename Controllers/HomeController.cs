@@ -45,9 +45,18 @@ public class HomeController : Controller
         return View(model); //artık sayfaya products değil model gönderilecek
     }
 
-    public IActionResult Privacy()
+    
+    public IActionResult Create()
     {
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult Create(Product model)
+    {
+        Repository.CreateProduct(model);
+        return RedirectToAction("Index");
     }
 
 

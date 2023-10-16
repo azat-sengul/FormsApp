@@ -20,6 +20,8 @@ namespace FormsApp.Models
         [Display (Name="Resim")]
         public string? Image { get; set; }
         public bool IsActive { get; set; }
+
+         [Display (Name="Category")]
         public int CategoryId { get; set; }
     }
 }
