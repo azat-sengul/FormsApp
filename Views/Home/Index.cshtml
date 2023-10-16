@@ -1,5 +1,5 @@
-﻿@model IEnumerable<Product>
-
+﻿@model ProductViewModel 
+<!--model IEnumerable<Product> Bu bir liste göndermek demektir. Artık ProductViewModel olduğı için aşağıdaki gibi kullanacağız-->
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -9,7 +9,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
-                    <select name="category" class="form-select" asp-items="ViewBag.Categories" value="@ViewBag.Category" >
+                    <select name="category"
+                     class="form-select" 
+                     asp-items="@(new SelectList(Model.Categories, "CategoryId", "Name", Model.SelectedCategory))"> 
+                     <!--Bu kısım ProductViewModel olmasaydı HomeControllerda Viewbag'e yazulacak kısımdı.-->
+                     <!--Model olduğu için Model.SelectedCategory yapıldı. Yoksa category olarak yazılacaktı.-->
+                     <!--Model olduğu için Model.Categories yapıldı. Yoksa Repository.Categories olarak yazılacaktı.-->
                         <option value="0">Hepsi</option>
                     </select>
                 </div>
@@ -25,16 +30,17 @@
 
     <thead>
         <tr>
-            <th style="width: 100px;">@Html.DisplayNameFor(m => m.ProductId)</th>
-            <th style="width: 100px;">@Html.DisplayNameFor(m => m.Image)</th>
-            <th>@Html.DisplayNameFor(m => m.Name)</th>
-            <th style="width: 100px;" >@Html.DisplayNameFor(m => m.Price)</th>
+            <th style="width: 100px;">@Html.DisplayNameFor(m => m.Products[0].ProductId)</th> <!--ProductViewModel classına uygun olması için Products[0] eklenmeli-->
+            <th style="width: 100px;">@Html.DisplayNameFor(m => m.Products[0].Image)</th>
+            <th>@Html.DisplayNameFor(m => m.Products[0].Name)</th>
+            <th style="width: 100px;" >@Html.DisplayNameFor(m => m.Products[0].Price)</th>
             <th style="width: 130px;" ></th>
         </tr>
     </thead>
 
-    <tbody>
-        @foreach (var prd in Model)
+    <tbody> 
+        <!--normalde Model yazıyorduk. Şimdi ProductViewModel'de ki Products olarak tanımlamamız gerekiyor-->
+        @foreach (var prd in @Model.Products) 
         {
             <tr>
                 <td>@prd.ProductId</td>

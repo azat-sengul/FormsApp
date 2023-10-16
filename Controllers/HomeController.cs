@@ -25,7 +25,7 @@ public class HomeController : Controller
             products = products.Where(p => p.Name.ToLower().Contains(searchString)).ToList();
         }
         // View üzerinde kategori listeleme için yapılacak
-        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name"); //Görünür name, value CategoryId olur
+        // ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name", category); //Görünür name, value CategoryId, selected category olur
 
         if(!String.IsNullOrEmpty(category) && category !="0")
         {
@@ -33,8 +33,16 @@ public class HomeController : Controller
             products = products.Where(p => p.CategoryId == int.Parse(category)).ToList();
         }
 
+        // ProductViewModel içerisinde gönderilmek istenen bilgiler paketlendi. bu durumda ViewBag kısmına buarada artık gerek kalmadı.
+        
+        var model = new ProductViewModel{ 
+            Products = products,
+            Categories = Repository.Categories,
+            SelectedCategory = category
+        }; 
 
-        return View(products);
+
+        return View(model); //artık sayfaya products değil model gönderilecek
     }
 
     public IActionResult Privacy()
