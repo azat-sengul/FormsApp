@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets/img/3.jpg"
     },
     {
+      "Id": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/3ee98a6e-15c8-4620-9452-cca4ca63099f.jpg",
+      "PackagePath": "staticwebassets/img/3ee98a6e-15c8-4620-9452-cca4ca63099f.jpg"
+    },
+    {
       "Id": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/4.jpg",
       "PackagePath": "staticwebassets/img/4.jpg"
     },
@@ -39,6 +43,14 @@
     {
       "Id": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/6.jpg",
       "PackagePath": "staticwebassets/img/6.jpg"
+    },
+    {
+      "Id": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/c34395a1-573f-4758-9f2a-8da6edca1363.jpg",
+      "PackagePath": "staticwebassets/img/c34395a1-573f-4758-9f2a-8da6edca1363.jpg"
+    },
+    {
+      "Id": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/d28683e6-18f1-4dbe-9ad5-f6b0ba5a53bb.jpg",
+      "PackagePath": "staticwebassets/img/d28683e6-18f1-4dbe-9ad5-f6b0ba5a53bb.jpg"
     },
     {
       "Id": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/js/site.js",

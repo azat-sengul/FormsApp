@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k34flQvjp1tyZg40uVXC7vjdCGqL2Pc0bjDnEmIoDxM=",
+  "Hash": "OLZDM1Azg+O2/x4/Y6RnCuoukGUKRdTQKjx7VETIbCM=",
   "Source": "FormsApp",
   "BasePath": "_content/FormsApp",
   "Mode": "Default",
@@ -153,6 +153,23 @@
       "OriginalItemSpec": "wwwroot/img/3.jpg"
     },
     {
+      "Identity": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/3ee98a6e-15c8-4620-9452-cca4ca63099f.jpg",
+      "SourceId": "FormsApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/",
+      "BasePath": "_content/FormsApp",
+      "RelativePath": "img/3ee98a6e-15c8-4620-9452-cca4ca63099f.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/3ee98a6e-15c8-4620-9452-cca4ca63099f.jpg"
+    },
+    {
       "Identity": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/4.jpg",
       "SourceId": "FormsApp",
       "SourceType": "Discovered",
@@ -202,6 +219,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/6.jpg"
+    },
+    {
+      "Identity": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/c34395a1-573f-4758-9f2a-8da6edca1363.jpg",
+      "SourceId": "FormsApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/",
+      "BasePath": "_content/FormsApp",
+      "RelativePath": "img/c34395a1-573f-4758-9f2a-8da6edca1363.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/c34395a1-573f-4758-9f2a-8da6edca1363.jpg"
+    },
+    {
+      "Identity": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/img/d28683e6-18f1-4dbe-9ad5-f6b0ba5a53bb.jpg",
+      "SourceId": "FormsApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/",
+      "BasePath": "_content/FormsApp",
+      "RelativePath": "img/d28683e6-18f1-4dbe-9ad5-f6b0ba5a53bb.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/d28683e6-18f1-4dbe-9ad5-f6b0ba5a53bb.jpg"
     },
     {
       "Identity": "/Users/azat/Desktop/UDEMYMVC/FormsApp/wwwroot/js/site.js",
