@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using FormsApp.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Win32.SafeHandles;
 
 namespace FormsApp.Controllers;
 
@@ -22,7 +23,7 @@ public class HomeController : Controller
         {
             ViewBag.SearchString = searchString;
 
-            products = products.Where(p => p.Name.ToLower().Contains(searchString)).ToList();
+            products = products.Where(p => p.Name!.ToLower().Contains(searchString)).ToList(); //Name nullable olarak işaretlendiği için altı sarı. Gidermek için Name sonuna ! eklenebilir.
         }
         // View üzerinde kategori listeleme için yapılacak
         // ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name", category); //Görünür name, value CategoryId, selected category olur
@@ -53,15 +54,17 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Product model)
+    public IActionResult Create(Product model, IFormFile imageFile)
     {
-        if(ModelState.IsValid) // Bu if bloğu validation sorgusu yapar her alan doğru bir şekilde girilirse çalışır
+
+
+        if (ModelState.IsValid) // Bu if bloğu validation sorgusu yapar her alan doğru bir şekilde girilirse çalışır
         {
 
-        model.ProductId = Repository.Products.Count +1 ; //veri tabanı kullanılmadığı için listedeki elemanları sayar 1 fazladsını ekler    
+            model.ProductId = Repository.Products.Count + 1; //veri tabanı kullanılmadığı için listedeki elemanları sayar 1 fazladsını ekler    
 
-        Repository.CreateProduct(model);
-        return RedirectToAction("Index");
+            Repository.CreateProduct(model);
+            return RedirectToAction("Index");
 
         }
         //Aşağıdaki kod bloğu model içinde validasyonu hataları olunca çalışır. 

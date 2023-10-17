@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using System;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace FormsApp.Models
 {
@@ -19,8 +22,9 @@ namespace FormsApp.Models
         [Display (Name="Fiyat")]
         public decimal? Price { get; set; }
 
+
         [Display (Name="Resim")]
-        public string? Image { get; set; }
+        public string? Image { get; set; } = string.Empty;
         public bool IsActive { get; set; }
 
          [Display (Name="Category")]

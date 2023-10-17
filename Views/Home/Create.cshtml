@@ -3,7 +3,7 @@
     ViewData["Title"] = "Create";
 }
 
-<form asp-controller="Home" asp-action="Create" method="post">
+<form asp-controller="Home" asp-action="Create" method="post" enctype="multipart/form-data"> <!--enctype ile formdan datalarda file olarak eklenen datalarda alınabilir-->
    <div asp-validation-summary="All" ></div> <!--Bütün proppertyler için hatalar  yukarıya özetlenmiş olarak çıkar-->
     <div class="mb-3">
         <!-- <label for="Name" class="form-label" >Name</label> -->
@@ -20,9 +20,8 @@
         <input asp-for="Price" class="form-control" >
     </div>
 
-    <div class="mb-3">
-        <label asp-for="Image" class="form-label"></label>
-        <input asp-for="Image" class="form-control" >
+    <div class="input-group mb-3"> <!--Resim ekleme için kullanılan alan--> 
+        <input type="file" name="imageFile" id="imageFile" class="form-control">
     </div>
 
  <!-- <div class="mb-3">
