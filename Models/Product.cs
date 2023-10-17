@@ -11,11 +11,13 @@ namespace FormsApp.Models
         [Display (Name="Ürün ID")]
         public int ProductId { get; set; }
 
+        [Required(ErrorMessage ="Zorunlu Alan")] //Hata mesajını türkçe yazmak için
         [Display (Name="Ürün Adı")]
         public string? Name { get; set; }
 
+        [Required]
         [Display (Name="Fiyat")]
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
 
         [Display (Name="Resim")]
         public string? Image { get; set; }

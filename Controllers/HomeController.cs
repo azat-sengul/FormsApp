@@ -55,8 +55,21 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult Create(Product model)
     {
+        if(ModelState.IsValid) // Bu if bloğu validation sorgusu yapar her alan doğru bir şekilde girilirse çalışır
+        {
+
+        model.ProductId = Repository.Products.Count +1 ; //veri tabanı kullanılmadığı için listedeki elemanları sayar 1 fazladsını ekler    
+
         Repository.CreateProduct(model);
         return RedirectToAction("Index");
+
+        }
+        //Aşağıdaki kod bloğu model içinde validasyonu hataları olunca çalışır. 
+        // Viewbag categorileri tekrar selectList içine getirir
+        // return view mevcut girilen verileri koruması için model olarak döndürülür
+
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+        return View(model);
     }
 
 

@@ -4,12 +4,15 @@
 }
 
 <form asp-controller="Home" asp-action="Create" method="post">
-
+   <div asp-validation-summary="All" ></div> <!--Bütün proppertyler için hatalar  yukarıya özetlenmiş olarak çıkar-->
     <div class="mb-3">
         <!-- <label for="Name" class="form-label" >Name</label> -->
         <!-- <input type="text" name="Name" id="Name" class="form-control" > Bunu tag helper ile aşağıdaki gibi yazabiliriz. -->
         <label asp-for="Name" class="form-label"></label>
         <input asp-for="Name" class="form-control" >
+
+        <span asp-validation-for="Name"></span> <!--Bir property için validation hatası eklenebilir-->
+
     </div>
 
     <div class="mb-3">
