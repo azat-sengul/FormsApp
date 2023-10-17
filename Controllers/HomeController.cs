@@ -75,5 +75,39 @@ public class HomeController : Controller
         return View(model);
     }
 
+    public IActionResult Edit(int? id)
+    {
+        var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+
+        if (entity ==null)
+        {
+            return NotFound();
+        }
+        
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+        return View(entity);
+    }
+
+    [HttpPost]
+
+    public IActionResult Edit(int id, Product model, IFormFile? imageFile)
+    {
+        if(id != model.ProductId)
+        {
+            
+           return NotFound();
+
+        }
+
+        if(ModelState.IsValid)
+        {
+            Repository.EditProduct(model);
+            return RedirectToAction("Index");
+        }
+
+        ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+        return View(model);
+    }
+
 
 }
